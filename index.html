@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="./image/movie-favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Lobster&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Movie Database</title>
+</head>
+<body>
+    <header>            
+        <h1 aria-label="Movie Database homepage">
+            <img src="./image/movie-projector.gif" alt="Cinema projector"> Movie Database
+        </h1>
+    </header>
+    <main>        
+        <div id="user-status" class="user-status-div" aria-label="User login section">
+            <h2 id="user-name" aria-label="Logged in user name"></h2>
+            <button id="login-btn" class="tmdb-user-button" aria-label="Log in with your TMDB account">Log in with TMDB</button>            
+        </div>
+        <nav class="menu-nav" aria-label="Main navigation">
+            <ul>
+                <li><button id="home-page-btn" aria-label="Go to home page">Home page</button></li>
+                <li><button id="top-rated-btn" aria-label="Show top 10 best rated movies">Top 10 best rated</button></li>
+                <li><button id="most-popular-btn" aria-label="Show top 10 most popular movies">Top 10 most popular</button></li>
+                <li><button id="random-trailer-btn" aria-label="Watch a random trailer">Random trailer</button></li>
+            </ul>
+            <form id="search-form" class="search-form" role="search" aria-label="Search for movies or people">
+                <select id="search-type-select" aria-label="Choose search type: movie or person">
+                    <option value="movie">Movie</option>
+                    <option value="person">Person</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Name of movie or person" aria-label="Search input field">
+                <button type="submit" aria-label="Submit search">Search</button>
+            </form>
+        </nav>
+        <div id="sort-container" aria-label="Sort options">
+            <select id="sort-select" class="sort-select hidden" aria-label="Sort search results">
+                <option value="">-- Sort --</option>
+                <option value="alpha-asc">Alphabetical order, ascending</option>
+                <option value="alpha-desc">Alphabetical order, descending</option>
+                <option value="popularity-asc">Popularity, ascending</option>
+                <option value="popularity-desc">Popularity, descending</option>
+            </select>
+        </div>        
+        <section id="content-section" class="content-section" aria-label="Main content section">
+            <article class="welcome-article" aria-label="Welcome message and feature description">
+                <h2>Welcome to Movie Database</h2>
+                <p>
+                    Discover and explore the world of movies like never before! 
+                    <br>With our TMDB-powered platform, you can:
+                </p>
+                <ul>
+                    <li>🌟 Explore the <strong>Top 10 best rated films</strong></li>
+                    <li>📈 View the <strong>Top 10 most popular movies</strong></li>                    
+                    <li>🎲 Watch a <strong>Random movie trailer</strong></li>
+                    <li>🔍🎬 <strong>Search for Movies</strong> by title</li>
+                    <li>🔍👤 <strong>Search for People</strong> in the film industry</li>
+                </ul>
+                <p>
+                    Log in with your TMDB account by clicking the red <strong>Log in with TMDB</strong> button at the top of the page to unlock extra features!
+                    Once logged in, you can <strong>add movies to your personal TMDB watchlist</strong> directly from this site — perfect for saving all the great titles you discover.
+                </p>                
+                <p>
+                    Don’t have a TMDB account yet? <a href="https://www.themoviedb.org/signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up for a TMDB account">Sign up here</a> — it’s free and only takes a minute!
+                </p>
+            </article>
+        </section>
+    </main> 
+    <footer></footer> 
+</body>
+</html>
